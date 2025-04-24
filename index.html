@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guidini </title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <img src="images/logo.png" alt="Guidini Logo"> 
+            </div>
+            <nav class="nav-links">
+                <a href="#">Accueil</a>
+                <a href="#">Comment ça marche</a>
+                <a href="#">Devenir guide</a>
+                <a href="#">Destinations</a>
+            </nav>
+            <div class="user-actions">
+                <a href="#" class="btn btn-secondary">Connexion</a>
+                <a href="#" class="btn btn-primary">Inscription</a>
+                <a href="guideur.html" class="btn btn-primary" style="background-color: rgb(156, 97, 107);">devenir guideur</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero" >
+        <div class="hero-content" >
+            <h1>Découvrez le Maroc avec un guide local pendant la Coupe du Monde 2030</h1>
+            <p>Connectez-vous avec des guides passionnés qui vous feront vivre une expérience authentique, entre matchs de football et découvertes culturelles</p>
+            
+            <div class="search-box">
+                <div class="search-input">
+                    <label>Ville</label>
+                    <select>
+                        <option>Casablanca</option>
+                        <option>Rabat</option>
+                        <option>Marrakech</option>
+                        <option>Tanger</option>
+                        <option>Fès</option>
+                        <option>Agadir</option>
+                    </select>
+                </div>
+                <div class="search-input">
+                    <label>Dates</label>
+                    <input type="text" placeholder="JJ/MM/AAAA - JJ/MM/AAAA">
+                </div>
+                <div class="search-input">
+                    <label>Langues</label>
+                    <select>
+                        <option>Toutes les langues</option>
+                        <option>Français</option>
+                        <option>Anglais</option>
+                        <option>Espagnol</option>
+                        <option>Arabe</option>
+                    </select>
+                </div>
+                <button class="search-button">Trouver un guide</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="section container">
+        <h2 class="section-title">Guides populaires</h2>
+        <div class="card-container">
+            <div class="card">
+                <div class="card-img" style="background-image: url('images/man2.jpg')"></div>
+                <div class="card-content">
+                    <h3 class="card-title">Hassan M.</h3>
+                    <p class="card-text">Guide expert en culture marocaine et football. Je vous ferai découvrir les meilleurs endroits de Casablanca.</p>
+                    <div class="badges">
+                        <span class="badge">Football</span>
+                        <span class="badge">Gastronomie</span>
+                        <span class="badge">Histoire</span>
+                    </div>
+                    <div class="card-meta">
+                        <div class="card-rating">
+                            <span>★★★★★</span> 4.9 (42 avis)
+                        </div>
+                        <div class="card-price">350 MAD / jour</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-img" style="background-image: url('images/woman1.jpg')"></div>
+                <div class="card-content">
+                    <h3 class="card-title">Fatima L.</h3>
+                    <p class="card-text">Passionnée de cuisine et de football. Je vous emmène dans les meilleurs restaurants de Marrakech.</p>
+                    <div class="badges">
+                        <span class="badge">Cuisine</span>
+                        <span class="badge">Médina</span>
+                        <span class="badge">Football</span>
+                    </div>
+                    <div class="card-meta">
+                        <div class="card-rating">
+                            <span>★★★★★</span> 4.8 (37 avis)
+                        </div>
+                        <div class="card-price">300 MAD / jour</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-img" style="background-image: url('images/man1.webp')"></div>
+                <div class="card-content">
+                    <h3 class="card-title">Youssef B.</h3>
+                    <p class="card-text">Guide sportif et culturel à Rabat. Expert des stades et de l'histoire du football marocain.</p>
+                    <div class="badges">
+                        <span class="badge">Stades</span>
+                        <span class="badge">Histoire</span>
+                        <span class="badge">Transport</span>
+                    </div>
+                    <div class="card-meta">
+                        <div class="card-rating">
+                            <span>★★★★★</span> 4.7 (29 avis)
+                        </div>
+                        <div class="card-price">320 MAD / jour</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-img" style="background-image: url('images/woman2.jpg')"></div>
+                <div class="card-content">
+                    <h3 class="card-title">Amina K.</h3>
+                    <p class="card-text">Guide trilingue à Tanger. Je vous accompagne pour les matchs et vous fais découvrir les plages.</p>
+                    <div class="badges">
+                        <span class="badge">Football</span>
+                        <span class="badge">Plages</span>
+                        <span class="badge">Shopping</span>
+                    </div>
+                    <div class="card-meta">
+                        <div class="card-rating">
+                            <span>★★★★★</span> 4.9 (51 avis)
+                        </div>
+                        <div class="card-price">380 MAD / jour</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-img" style="background-image: url('images/man3.jpg')"></div>
+                  <div class="card-content">
+                    <h3 class="card-title">Mohammed R.</h3>
+                  <p class="card-text">Guide professionnel à Fès. Spécialiste de l'histoire footballistique marocaine et de la médina authentique.</p>
+                   <div class="badges">
+                   <span class="badge">Histoire du football</span>
+                   <span class="badge">Médina</span>
+                    <span class="badge">Artisanat</span>
+                    </div>
+                   <div class="card-meta">
+                    <div class="card-rating">
+                     <span>★★★★★</span> 4.8 (33 avis)
+                       </div>
+                       <div class="card-price">340 MAD / jour</div>
+                            </div>
+                                </div>
+             </div>
+
+<div class="card">
+    <div class="card-img" style="background-image: url('images/woman3.webp')"></div>
+    <div class="card-content">
+        <h3 class="card-title">Nadia T.</h3>
+        <p class="card-text">Étudiante en tourisme à Agadir. Je vous fais découvrir les plus belles plages et vous accompagne aux matchs côtiers.</p>
+        <div class="badges">
+            <span class="badge">Plages</span>
+            <span class="badge">Football</span>
+            <span class="badge">Activités nautiques</span>
+        </div>
+        <div class="card-meta">
+            <div class="card-rating">
+                <span>★★★★★</span> 4.6 (21 avis)
+            </div>
+            <div class="card-price">270 MAD / jour</div>
+        </div>
+    </div>
+</div>
+        </div>
+    </section>
+
+    <section class="section container">
+        <h2 class="section-title">Comment ça marche ?</h2>
+        <div class="features">
+            <div class="feature">
+                <div class="feature-icon">🔍</div>
+                <h3>Recherchez</h3>
+                <p>Trouvez un guide local selon vos critères : ville, langue, spécialités et disponibilité pendant la Coupe du Monde.</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">💬</div>
+                <h3>Discutez</h3>
+                <p>Échangez avec votre guide via notre chat intégré pour planifier votre journée et préciser vos attentes.</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">📅</div>
+                <h3>Réservez</h3>
+                <p>Confirmez votre réservation de manière sécurisée et préparez-vous à vivre une expérience inoubliable.</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">⚽</div>
+                <h3>Profitez</h3>
+                <p>Savourez la Coupe du Monde et découvrez le Maroc authentique avec un local qui connaît tous les secrets.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section container">
+        <h2 class="section-title">Destinations populaires</h2>
+        <div class="card-container">
+            <div class="card">
+                <div class="card-img" style="background-image: url('images/casa.jpeg')"></div>
+                <div class="card-content">
+                    <h3 class="card-title">Casablanca</h3>
+                    <p class="card-text">Vibrez dans la plus grande ville du Maroc, siège de plusieurs matchs de la Coupe du Monde 2030.</p>
+                    <div class="card-meta">
+                        <div class="card-rating">
+                            <span>★★★★★</span> 4.7
+                        </div>
+                        <div>125 guides disponibles</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-img" style="background-image: url('images/merrakech.jpg')"></div>
+                <div class="card-content">
+                    <h3 class="card-title">Marrakech</h3>
+                    <p class="card-text">Découvrez la ville rouge, entre tradition et modernité, et son grand stade rénové.</p>
+                    <div class="card-meta">
+                        <div class="card-rating">
+                            <span>★★★★★</span> 4.9
+                        </div>
+                        <div>98 guides disponibles</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-img" style="background-image: url('images/rabat.jpeg')"></div>
+                <div class="card-content">
+                    <h3 class="card-title">Rabat</h3>
+                    <p class="card-text">La capitale vous accueille pour les matchs phares et vous dévoile ses trésors culturels.</p>
+                    <div class="card-meta">
+                        <div class="card-rating">
+                            <span>★★★★★</span> 4.8
+                        </div>
+                        <div>87 guides disponibles</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-img" style="background-image: url('images/tanger.jpg')"></div>
+                <div class="card-content">
+                    <h3 class="card-title">Tanger</h3>
+                    <p class="card-text">La porte de l'Afrique vous émerveillera par son atmosphère unique entre deux continents.</p>
+                    <div class="card-meta">
+                        <div class="card-rating">
+                            <span>★★★★★</span> 4.6
+                        </div>
+                        <div>63 guides disponibles</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <div class="container">
+            <h2>Prêt à vivre la Coupe du Monde 2030 autrement ?</h2>
+            <p>Inscrivez-vous dès maintenant pour accéder à notre réseau de guides locaux passionnés et créer des souvenirs inoubliables au Maroc.</p>
+            <div class="btn-group">
+                <a href="#" class="btn btn-primary">Je cherche un guide</a>
+                <a href="#" class="btn btn-outline">Je deviens guide</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-column">
+                <h3>Guidini</h3>
+                <p>Votre compagnon idéal pour découvrir le Maroc pendant la Coupe du Monde FIFA 2030. Connectez-vous avec des guides locaux passionnés.</p>
+                <div class="language-select">
+                    <span>Langue :</span>
+                    <select>
+                        <option>Français</option>
+                        <option>English</option>
+                        <option>Español</option>
+                        <option>العربية</option>
+                    </select>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3>À propos</h3>
+                <ul>
+                    <li><a href="#">Notre mission</a></li>
+                    <li><a href="#">Comment ça marche</a></li>
+                    <li><a href="#">Devenir guide</a></li>
+                    <li><a href="#">Partenariats</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Support</h3>
+                <ul>
+                    <li><a href="#">Centre d'aide</a></li>
+                    <li><a href="#">Contactez-nous</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Politique de confidentialité</a></li>
+                    <li><a href="#">Conditions d'utilisation</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Destinations</h3>
+                <ul>
+                    <li><a href="#">Casablanca</a></li>
+                    <li><a href="#">Rabat</a></li>
+                    <li><a href="#">Marrakech</a></li>
+                    <li><a href="#">Tanger</a></li>
+                    <li><a href="#">Fès</a></li>
+                    <li><a href="#">Agadir</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container copyright">
+            <p>&copy; 2025 Guidini. Tous droits réservés.</p>
+        </div>
+    </footer>
+</body>
+</html>

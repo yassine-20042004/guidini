@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tableau de bord Guide - Guidini | Coupe du Monde 2030 au Maroc</title>
+    <link rel="stylesheet" href="styles-interface.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <a href="#" class="logo">
+                    <img src="images/logo.png" alt="Guidini Logo">
+                    
+                </a>
+                <button class="mobile-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            
+            <div class="user-info">
+                <img src="/api/placeholder/50/50" alt="User Avatar" class="user-avatar">
+                <div class="user-details">
+                    <h4>Ahmed Benjelloun <span class="badge badge-success">Pro</span></h4>
+                    <p>Guide à Rabat</p>
+                </div>
+            </div>
+            
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#" class="nav-link active">
+                        <i class="fas fa-home"></i>
+                        <span class="nav-text">Tableau de bord</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span class="nav-text">Calendrier</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="fas fa-clipboard-list"></i>
+                        <span class="nav-text">Réservations</span>
+                        <span class="nav-badge">5</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="fas fa-comment-dots"></i>
+                        <span class="nav-text">Messages</span>
+                        <span class="nav-badge">3</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="fas fa-star"></i>
+                        <span class="nav-text">Avis</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="fas fa-map-marked-alt"></i>
+                        <span class="nav-text">Mes expériences</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="fas fa-wallet"></i>
+                        <span class="nav-text">Paiements</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="fas fa-chart-line"></i>
+                        <span class="nav-text">Statistiques</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="fas fa-cog"></i>
+                        <span class="nav-text">Paramètres</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="fas fa-question-circle"></i>
+                        <span class="nav-text">Aide</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="fas fa-sign-out-alt"></i>
+                        <span class="nav-text">Déconnexion</span>
+                    </a>
+                </li>
+            </ul>
+        </aside>
+        
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="page-header">
+                <h1 class="page-title">Tableau de bord</h1>
+                <div class="header-actions">
+                    <button class="btn btn-outline btn-secondary">
+                        <i class="fas fa-globe"></i> Voir mon profil public
+                    </button>
+                    <button class="btn btn-primary">
+                        <i class="fas fa-plus"></i> Créer une expérience
+                    </button>
+                </div>
+            </div>
+            
+            <div class="dashboard-stats">
+                <div class="stat-card">
+                    <div class="stat-icon purple">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>12</h3>
+                        <p>Réservations ce mois</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon blue">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>4.8</h3>
+                        <p>Note moyenne</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon green">
+                        <i class="fas fa-wallet"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>8,450 DH</h3>
+                        <p>Revenus ce mois</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon orange">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>24</h3>
+                        <p>Clients satisfaits</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="two-column-layout">
+                <div class="left-column">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">Prochaines réservations</h3>
+                            <div class="card-actions">
+                                <button class="btn btn-outline btn-secondary btn-sm">Voir tout</button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="reservations">
+                                <div class="reservation-item">
+                                    <img src="/api/placeholder/50/50" alt="Client" class="client-avatar">
+                                    <div class="reservation-details">
+                                        <h4>Marie Dupont <span class="client-country">FR</span></h4>
+                                        <div class="reservation-meta">
+                                            <div><i class="fas fa-calendar-alt"></i> 15 Juin 2030</div>
+                                            <div><i class="fas fa-clock"></i> 09:00 - 12:00</div>
+                                        </div>
+                                        <div class="reservation-meta">
+                                            <div><i class="fas fa-map-marker-alt"></i> Tour Hassan</div>
+                                            <div class="reservation-price">1,200 DH</div>
+                                        </div>
+                                    </div>
+                                    <div class="reservation-actions">
+                                        <button class="btn btn-success btn-sm">Confirmer</button>
+                                        <button class="btn btn-outline btn-secondary btn-sm">Détails</button>
+                                    </div>
+                                </div>
+                                <div class="reservation-item">
+                                    <img src="/api/placeholder/50/50" alt="Client" class="client-avatar">
+                                    <div class="reservation-details">
+                                        <h4>John Smith <span class="client-country">US</span> <span class="status-badge status-confirmed">Confirmé</span></h4>
+                                        <div class="reservation-meta">
+                                            <div><i class="fas fa-calendar-alt"></i> 18 Juin 2030</div>
+                                            <div><i class="fas fa-clock"></i> 14:00 - 17:00</div>
+                                        </div>
+                                        <div class="reservation-meta">
+                                            <div><i class="fas fa-map-marker-alt"></i> Médina de Rabat</div>
+                                            <div class="reservation-price">1,500 DH</div>
+                                        </div>
+                                    </div>
+                                    <div class="reservation-actions">
+                                        <button class="btn btn-outline btn-secondary btn-sm">Détails</button>
+                                    </div>
+                                </div>
+                                <div class="reservation-item">
+                                    <img src="/api/placeholder/50/50" alt="Client" class="client-avatar">
+                                    <div class="reservation-details">
+                                        <h4>Carlos Mendez <span class="client-country">ES</span> <span class="status-badge status-completed">Terminé</span></h4>
+                                        <div class="reservation-meta">
+                                            <div><i class="fas fa-calendar-alt"></i> 5 Juin 2030</div>
+                                            <div><i class="fas fa-clock"></i> 10:00 - 13:00</div>
+                                        </div>
+                                        <div class="reservation-meta">
+                                            <div><i class="fas fa-map-marker-alt"></i> Musée Mohammed VI</div>
+                                            <div class="reservation-price">1,000 DH</div>
+                                        </div>
+                                    </div>
+                                    <div class="reservation-actions">
+                                        <button class="btn btn-outline btn-secondary btn-sm">Détails</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">Derniers avis</h3>
+                            <div class="card-actions">
+                                <button class="btn btn-outline btn-secondary btn-sm">Voir tout</button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="reviews-list">
+                                <div class="review-item">
+                                    <div class="review-header">
+                                        <div class="reviewer">
+                                            <img src="/api/placeholder/40/40" alt="Reviewer" class="reviewer-avatar">
+                                            <div class="reviewer-info">
+                                                <h5>Sophie Martin</h5>
+                                                <p>France</p>
+                                            </div>
+                                        </div>
+                                        <div class="review-rating">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                    </div>
+                                    <div class="review-content">
+                                        Ahmed est un guide exceptionnel ! Sa connaissance de l'histoire de Rabat est impressionnante. Il a su rendre la visite très interactive et adaptée à nos besoins.
+                                    </div>
+                                    <div class="review-date">12 juin 2030</div>
+                                </div>
+                                <div class="review-item">
+                                    <div class="review-header">
+                                        <div class="reviewer">
+                                            <img src="/api/placeholder/40/40" alt="Reviewer" class="reviewer-avatar">
+                                            <div class="reviewer-info">
+                                                <h5>Thomas Müller</h5>
+                                                <p>Allemagne</p>
+                                            </div>
+                                        </div>
+                                        <div class="review-rating">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star-half-alt"></i>
+                                        </div>
+                                    </div>
+                                    <div class="review-content">
+                                        Excellente visite de la médina avec Ahmed. Il parle très bien allemand et a su nous montrer des endroits que nous n'aurions jamais découverts seuls.
+                                    </div>
+                                    <div class="review-date">8 juin 2030</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="right-column">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">Prochain tour</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="upcoming-tour">
+                                <div class="tour-icon">
+                                    <i class="fas fa-map-marked-alt"></i>
+                                </div>
+                                <div class="tour-details">
+                                    <h4>Visite de la Kasbah des Oudayas</h4>
+                                    <p><i class="fas fa-calendar-alt"></i> 15 Juin 2030, 09:00 - 12:00</p>
+                                    <p><i class="fas fa-users"></i> 4 personnes (Marie Dupont +3)</p>
+                                </div>
+                            </div>
+                            <div class="btn-group" style="display: flex; gap: 10px;">
+                                <button class="btn btn-primary" style="flex: 1;">
+                                    <i class="fas fa-directions"></i> Itinéraire
+                                </button>
+                                <button class="btn btn-secondary" style="flex: 1;">
+                                    <i class="fas fa-envelope"></i> Contacter
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">Calendrier</h3>
+                            <div class="card-actions">
+                                <button class="btn btn-outline btn-secondary btn-sm">Aujourd'hui</button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="calendar">
+                                <div class="calendar-header">
+                                    <div class="calendar-month">Juin 2030</div>
+                                    <div class="calendar-nav">
+                                        <button><i class="fas fa-chevron-left"></i></button>
+                                        <button><i class="fas fa-chevron-right"></i></button>
+                                    </div>
+                                </div>
+                                <div class="calendar-weekdays">
+                                    <div class="weekday">Lun</div>
+                                    <div class="weekday">Mar</div>
+                                    <div class="weekday">Mer</div>
+                                    <div class="weekday">Jeu</div>
+                                    <div class="weekday">Ven</div>
+                                    <div class="weekday">Sam</div>
+                                    <div class="weekday">Dim</div>
+                                </div>
+                                <div class="calendar-days">
+                                    <div class="calendar-day empty"></div>
+                                    <div class="calendar-day empty"></div>
+                                    <div class="calendar-day">1</div>
+                                    <div class="calendar-day">2</div>
+                                    <div class="calendar-day">3</div>
+                                    <div class="calendar-day">4</div>
+                                    <div class="calendar-day">5</div>
+                                    <div class="calendar-day">6</div>
+                                    <div class="calendar-day">7</div>
+                                    <div class="calendar-day">8</div>
+                                    <div class="calendar-day">9</div>
+                                    <div class="calendar-day">10</div>
+                                    <div class="calendar-day">11</div>
+                                    <div class="calendar-day">12</div>
+                                    <div class="calendar-day has-event">13</div>
+                                    <div class="calendar-day has-event">14</div>
+                                    <div class="calendar-day booked">15</div>
+                                    <div class="calendar-day">16</div>
+                                    <div class="calendar-day">17</div>
+                                    <div class="calendar-day booked">18</div>
+                                    <div class="calendar-day">19</div>
+                                    <div class="calendar-day has-event">20</div>
+                                    <div class="calendar-day">21</div>
+                                    <div class="calendar-day">22</div>
+                                    <div class="calendar-day">23</div>
+                                    <div class="calendar-day">24</div>
+                                    <div class="calendar-day">25</div>
+                                    <div class="calendar-day">26</div>
+                                    <div class="calendar-day">27</div>
+                                    <div class="calendar-day">28</div>
+                                    <div class="calendar-day">29</div>
+                                    <div class="calendar-day today">30</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">Messages récents</h3>
+                            <div class="card-actions">
+                                <button class="btn btn-outline btn-secondary btn-sm">Voir tout</button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="message-preview">
+                                <img src="/api/placeholder/40/40" alt="Sender" class="message-avatar">
+                                <div class="message-content">
+                                    <div class="message-header">
+                                        <div class="message-sender">Marie Dupont</div>
+                                        <div class="message-time">10:45</div>
+                                    </div>
+                                    <div class="message-text unread">Bonjour Ahmed, je voulais savoir si nous pouvons modifier l'heure de notre visite...</div>
+                                </div>
+                            </div>
+                            <div class="message-preview">
+                                <img src="/api/placeholder/40/40" alt="Sender" class="message-avatar">
+                                <div class="message-content">
+                                    <div class="message-header">
+                                        <div class="message-sender">Guidini Support</div>
+                                        <div class="message-time">Hier</div>
+                                    </div>
+                                    <div class="message-text">Nouvelle mise à jour de l'application disponible...</div>
+                                </div>
+                            </div>
+                            <div class="message-preview">
+                                <img src="/api/placeholder/40/40" alt="Sender" class="message-avatar">
+                                <div class="message-content">
+                                    <div class="message-header">
+                                        <div class="message-sender">John Smith</div>
+                                        <div class="message-time">15 juin</div>
+                                    </div>
+                                    <div class="message-text">Merci pour la super visite hier ! Je recommanderai vos services...</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Statistiques des réservations</h3>
+                    <div class="card-actions">
+                        <button class="btn btn-outline btn-secondary btn-sm">Cette année</button>
+                        <button class="btn btn-outline btn-secondary btn-sm active">Ce mois</button>
+                        <button class="btn btn-outline btn-secondary btn-sm">Cette semaine</button>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="quick-stats">
+                        <div class="quick-stat">
+                            <div class="quick-stat-value">12</div>
+                            <div class="quick-stat-label">Réservations</div>
+                        </div>
+                        <div class="quick-stat">
+                            <div class="quick-stat-value">8,450 DH</div>
+                            <div class="quick-stat-label">Revenus</div>
+                        </div>
+                        <div class="quick-stat">
+                            <div class="quick-stat-value">92%</div>
+                            <div class="quick-stat-label">Taux de remplissage</div>
+                        </div>
+                        <div class="quick-stat">
+                            <div class="quick-stat-value">4.8</div>
+                            <div class="quick-stat-label">Note moyenne</div>
+                        </div>
+                    </div>
+                    
+                    <div class="progress-container">
+                        <div class="progress-header">
+                            <div class="progress-label">Confirmées</div>
+                            <div class="progress-value">8/12</div>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 66%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="progress-container">
+                        <div class="progress-header">
+                            <div class="progress-label">Terminées</div>
+                            <div class="progress-value">5/12</div>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 42%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="progress-container">
+                        <div class="progress-header">
+                            <div class="progress-label">Annulées</div>
+                            <div class="progress-value">1/12</div>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 8%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer">
+                <p>© 2030 Guidini - Plateforme de guides touristiques pour la Coupe du Monde Maroc 2030</p>
+            </div>
+        </main>
+    </div>
+    
+    <script>
+        // Toggle sidebar on mobile
+        document.querySelector('.mobile-toggle').addEventListener('click', function() {
+            document.querySelector('.sidebar').classList.toggle('expanded');
+            document.querySelector('.main-content').classList.toggle('sidebar-expanded');
+        });
+    </script>
+</body>
+</html>
