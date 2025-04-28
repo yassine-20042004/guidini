@@ -67,8 +67,8 @@ Feel free to fork this repository, open an issue, or submit a pull request.
 ## 📫 Contact
 
 For inquiries or collaboration opportunities:  
-📧 [your.email@example.com]  
-🔗 [LinkedIn / Portfolio / Instagram if available]
+📧 [yassinejanane71@gmail.com]  
+🔗 [www.linkedin.com/in/yassine-janane-723568251]
 
 ---
 
