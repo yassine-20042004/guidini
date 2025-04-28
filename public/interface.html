@@ -1,0 +1,205 @@
+<!-- Add this form to your interface.html or create a new guide-registration.html file -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription Guide - Guidini | Coupe du Monde 2030 au Maroc</title>
+    <link rel="stylesheet" href="styles-interface.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Keep your existing sidebar if needed -->
+        
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="page-header">
+                <h1 class="page-title">Inscription Guide</h1>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Formulaire d'inscription</h3>
+                </div>
+                <div class="card-body">
+                    <form id="guideForm" enctype="multipart/form-data">
+                        <div class="form-group">
+                            <label for="firstName">Prénom</label>
+                            <input type="text" id="firstName" name="firstName" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="lastName">Nom</label>
+                            <input type="text" id="lastName" name="lastName" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Téléphone</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="city">Ville</label>
+                            <input type="text" id="city" name="city" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="age">Âge</label>
+                            <input type="number" id="age" name="age" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Langues parlées</label>
+                            <div class="checkbox-group">
+                                <label><input type="checkbox" name="languages" value="Français"> Français</label>
+                                <label><input type="checkbox" name="languages" value="Anglais"> Anglais</label>
+                                <label><input type="checkbox" name="languages" value="Espagnol"> Espagnol</label>
+                                <label><input type="checkbox" name="languages" value="Arabe"> Arabe</label>
+                                <label><input type="checkbox" name="languages" value="Allemand"> Allemand</label>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="bio">Biographie</label>
+                            <textarea id="bio" name="bio" rows="4" required></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Spécialités</label>
+                            <div class="checkbox-group">
+                                <label><input type="checkbox" name="specialties" value="Histoire"> Histoire</label>
+                                <label><input type="checkbox" name="specialties" value="Gastronomie"> Gastronomie</label>
+                                <label><input type="checkbox" name="specialties" value="Architecture"> Architecture</label>
+                                <label><input type="checkbox" name="specialties" value="Nature"> Nature</label>
+                                <label><input type="checkbox" name="specialties" value="Football"> Football</label>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="experience">Expérience professionnelle</label>
+                            <textarea id="experience" name="experience" rows="4" required></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="availability">Disponibilité</label>
+                            <select id="availability" name="availability" required>
+                                <option value="">Sélectionner</option>
+                                <option value="temps plein">Temps plein</option>
+                                <option value="temps partiel">Temps partiel</option>
+                                <option value="weekends">Weekends seulement</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="startingPrice">Prix de départ (DH)</label>
+                            <input type="number" id="startingPrice" name="startingPrice" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="transport">Transport disponible</label>
+                            <select id="transport" name="transport" required>
+                                <option value="">Sélectionner</option>
+                                <option value="voiture">Voiture personnelle</option>
+                                <option value="transport public">Transport public</option>
+                                <option value="aucun">Aucun</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="profilePhoto">Photo de profil</label>
+                            <input type="file" id="profilePhoto" name="profilePhoto" accept="image/*" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="idCard">Copie de carte d'identité</label>
+                            <input type="file" id="idCard" name="idCard" accept="image/*,application/pdf" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <button type="submit" id="submitBtn" class="btn btn-primary">Soumettre la candidature</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script>
+        // Add this JavaScript to fix your form submission
+
+document.getElementById('guideForm').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    
+    const formData = new FormData(this);
+    
+    // Get checkbox values for languages and specialties
+    const languageCheckboxes = document.querySelectorAll('input[name="languages"]:checked');
+    const languages = Array.from(languageCheckboxes).map(cb => cb.value);
+    
+    const specialtyCheckboxes = document.querySelectorAll('input[name="specialties"]:checked');
+    const specialties = Array.from(specialtyCheckboxes).map(cb => cb.value);
+    
+    // Clear previous values and add arrays
+    formData.delete('languages');
+    formData.delete('specialties');
+    
+    languages.forEach(lang => {
+        formData.append('languages', lang);
+    });
+    
+    specialties.forEach(specialty => {
+        formData.append('specialties', specialty);
+    });
+    
+    try {
+        const submitBtn = document.getElementById('submitBtn');
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Envoi en cours...';
+        
+        // Log the form data for debugging
+        for (let pair of formData.entries()) {
+            console.log(pair[0] + ': ' + pair[1]);
+        }
+        
+        const response = await fetch('/api/guides', {
+            method: 'POST',
+            body: formData
+        });
+        
+        // Check if response is JSON
+        const contentType = response.headers.get('content-type');
+        if (contentType && contentType.includes('application/json')) {
+            const result = await response.json();
+            
+            if (result.success) {
+                alert('Votre candidature a été soumise avec succès !');
+                if (result.redirect) {
+    window.location.href = result.redirect;
+}
+            } else {
+                alert('Erreur: ' + (result.error || 'Une erreur est survenue'));
+            }
+        } else {
+            // Handle non-JSON response
+            const textResponse = await response.text();
+            console.error('Server returned non-JSON response:', textResponse);
+            alert('Erreur serveur: Le serveur a renvoyé une réponse invalide');
+        }
+    } catch (error) {
+        console.error('Error:', error);
+        alert('Une erreur est survenue lors de l\'envoi du formulaire');
+    } finally {
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Soumettre la candidature';
+    }
+});
+    </script>
+    
+</body>
+</html>

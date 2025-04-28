@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devenir Guide - Guidini | Coupe du Monde 2030 au Maroc</title>
+    <link rel="stylesheet" href="styles-guide.css">
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <img src="images/logo.png" alt="Guidini Logo"> 
+            </div>
+            <nav class="nav-links">
+                <a href="index.html">Accueil</a>
+                <a href="#">Comment ça marche</a>
+                <a href="#">Devenir guide</a>
+                <a href="#">Destinations</a>
+            </nav>
+            <div class="user-actions">
+                <a href="#" class="btn btn-secondary">Connexion</a>
+                <a href="#" class="btn btn-primary">Inscription</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="section container" id="signup">
+        <h2 class="section-title">Rejoignez notre communauté de guides</h2>
+        <p class="section-subtitle">Remplissez ce formulaire pour commencer votre aventure en tant que guide pour la Coupe du Monde 2030.</p>
+        
+        <div class="form-section">
+            <form id="guideForm" action="/api/guides" method="post" enctype="multipart/form-data">
+                <h3 class="form-title">Informations personnelles</h3>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="form-label" for="firstName">Prénom</label>
+                        <input type="text" id="firstName" name="firstName" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="lastName">Nom</label>
+                        <input type="text" id="lastName" name="lastName" class="form-input" required>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="form-label" for="email">Email</label>
+                        <input type="email" id="email" name="email" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="phone">Téléphone</label>
+                        <input type="tel" id="phone" name="phone" class="form-input" required>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="form-label" for="city">Ville</label>
+                        <input type="text" id="city" name="city" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="age">Âge</label>
+                        <input type="number" id="age" name="age" min="18" class="form-input" required>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label" for="languages">Langues parlées</label>
+                    <div class="checkbox-group">
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="lang-ar" name="languages" value="arabe">
+                            <label for="lang-ar">Arabe</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="lang-fr" name="languages" value="francais">
+                            <label for="lang-fr">Français</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="lang-en" name="languages" value="anglais">
+                            <label for="lang-en">Anglais</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="lang-es" name="languages" value="espagnol">
+                            <label for="lang-es">Espagnol</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="lang-de" name="languages" value="allemand">
+                            <label for="lang-de">Allemand</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="lang-it" name="languages" value="italien">
+                            <label for="lang-it">Italien</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="lang-other" name="languages" value="autre">
+                            <label for="lang-other">Autre</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <h3 class="form-title">Votre profil de guide</h3>
+                
+                <div class="form-group">
+                    <label class="form-label" for="profilePhoto">Photo de profil</label>
+                    <input type="file" id="profilePhoto" name="profilePhoto" accept="image/*" class="form-input">
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label" for="bio">Présentez-vous en quelques lignes</label>
+                    <textarea id="bio" name="bio" class="form-textarea" placeholder="Parlez de vous, de votre expérience et de votre passion pour le Maroc..."></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">Vos spécialités</label>
+                    <div class="checkbox-group">
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="spec-football" name="specialties" value="football">
+                            <label for="spec-football">Football & sports</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="spec-culture" name="specialties" value="culture">
+                            <label for="spec-culture">Culture & histoire</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="spec-food" name="specialties" value="gastronomie">
+                            <label for="spec-food">Gastronomie</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="spec-nature" name="specialties" value="nature">
+                            <label for="spec-nature">Nature & aventure</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="spec-nightlife" name="specialties" value="nightlife">
+                            <label for="spec-nightlife">Vie nocturne</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="spec-shopping" name="specialties" value="shopping">
+                            <label for="spec-shopping">Shopping & artisanat</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="spec-photo" name="specialties" value="photo">
+                            <label for="spec-photo">Spots photos</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="form-label" for="experience">Expérience antérieure</label>
+                        <select id="experience" name="experience" class="form-select">
+                            <option value="">Sélectionner</option>
+                            <option value="none">Aucune expérience (débutant)</option>
+                            <option value="amateur">Guide amateur occasionnel</option>
+                            <option value="professional">Guide professionnel</option>
+                            <option value="tourism">Professionnel du tourisme</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="availability">Disponibilité</label>
+                        <select id="availability" name="availability" class="form-select">
+                            <option value="">Sélectionner</option>
+                            <option value="full-time">Temps plein</option>
+                            <option value="part-time">Temps partiel</option>
+                            <option value="weekends">Weekends uniquement</option>
+                            <option value="evenings">Soirées uniquement</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label" for="startingPrice">Tarif de départ (par heure et par personne, en MAD)</label>
+                    <input type="number" id="startingPrice" name="startingPrice" min="50" step="10" class="form-input">
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label" for="transport">Mode de transport disponible</label>
+                    <select id="transport" name="transport" class="form-select">
+                        <option value="">Sélectionner</option>
+                        <option value="on-foot">À pied uniquement</option>
+                        <option value="public">Transport en commun</option>
+                        <option value="personal-car">Véhicule personnel</option>
+                        <option value="professional">Transport professionnel</option>
+                    </select>
+                </div>
+                
+                <h3 class="form-title">Vérification d'identité</h3>
+                
+                <div class="form-group">
+                    <label class="form-label" for="idCard">Carte d'identité ou passeport (recto-verso)</label>
+                    <input type="file" id="idCard" name="idCard" accept="image/*" class="form-input" required>
+                </div>
+                
+                <div class="form-group">
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="terms" required>
+                        <label for="terms">J'accepte les <a href="#">conditions générales</a> et la <a href="#">politique de confidentialité</a> de Guidini</label>
+                    </div>
+                </div>
+                
+                <button type="submit" class="submit-btn">Soumettre ma candidature</button>
+            </form>
+        </div>
+    </section>
+
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Rejoignez l'aventure dès maintenant</h2>
+                <p>La Coupe du Monde 2030 sera un événement historique pour le Maroc. Ne manquez pas cette opportunité unique de partager votre passion et de faire partie de cette expérience inoubliable.</p>
+                <a href="#signup" class="btn btn-primary">Devenir guide</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section container">
+        <h2 class="section-title">Guidini en chiffres</h2>
+        <div class="stats">
+            <div class="stat">
+                <div class="stat-number">5000+</div>
+                <div class="stat-label">Guides actifs</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">30+</div>
+                <div class="stat-label">Villes couvertes</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">98%</div>
+                <div class="stat-label">Taux de satisfaction</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">15M+</div>
+                <div class="stat-label">Visiteurs attendus</div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Guidini</h3>
+                    <ul>
+                        <li><a href="#">À propos</a></li>
+                        <li><a href="#">Comment ça marche</a></li>
+                        <li><a href="#">Carrières</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Presse</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Devenir guide</h3>
+                    <ul>
+                        <li><a href="#">Inscription</a></li>
+                        <li><a href="#">Guides responsables</a></li>
+                        <li><a href="#">Formation</a></li>
+                        <li><a href="#">Témoignages</a></li>
+                        <li><a href="#">FAQ guides</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Visiteurs</h3>
+                    <ul>
+                        <li><a href="#">Trouver un guide</a></li>
+                        <li><a href="#">Destinations</a></li>
+                        <li><a href="#">Coupe du Monde 2030</a></li>
+                        <li><a href="#">Assurance voyage</a></li>
+                        <li><a href="#">FAQ visiteurs</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="#">Centre d'aide</a></li>
+                        <li><a href="#">Contactez-nous</a></li>
+                        <li><a href="#">Conditions générales</a></li>
+                        <li><a href="#">Politique de confidentialité</a></li>
+                        <li><a href="#">Sécurité</a></li>
+                    </ul>
+                    <div class="language-select">
+                        <label for="language">Langue:</label>
+                        <select id="language">
+                            <option value="fr">Français</option>
+                            <option value="en">English</option>
+                            <option value="ar">العربية</option>
+                            <option value="es">Español</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                &copy; 2025 Guidini. Tous droits réservés.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple JavaScript to toggle FAQ items
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const item = question.parentNode;
+                item.classList.toggle('active');
+            });
+        });
+    </script>
+    
+    <script>
+        document.querySelector('form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const formData = {
+                firstName: document.getElementById('first-name').value,
+                lastName: document.getElementById('last-name').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                city: document.getElementById('city').value,
+                age: document.getElementById('age').value,
+                languages: Array.from(document.querySelectorAll('input[name="languages[]"]:checked')).map(el => el.value),
+                bio: document.getElementById('bio').value,
+                specialties: Array.from(document.querySelectorAll('input[name="specialties[]"]:checked')).map(el => el.value),
+                experience: document.getElementById('experience').value,
+                availability: document.getElementById('availability').value,
+                startingPrice: document.getElementById('starting-price').value,
+                transport: document.getElementById('transport').value
+            };
+    
+            try {
+                const response = await fetch('/api/guides', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(formData)
+                });
+    
+                const data = await response.json();
+                
+                if (response.ok) {
+                    alert('Application submitted successfully!');
+                    // Optionally redirect or reset form
+                    window.location.href = '/interface.html';
+                } else {
+                    throw new Error(data.message || 'Failed to submit application');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert('There was an error submitting your application. Please try again.');
+            }
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    const guideForm = document.getElementById('guideForm');
+    
+    if (guideForm) {
+        guideForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            // Create FormData from the form
+            const formData = new FormData(guideForm);
+            
+            try {
+                const response = await fetch('/api/guides', {
+                    method: 'POST',
+                    body: formData // FormData automatically handles file uploads
+                });
+                
+                const result = await response.json();
+                
+                if (response.ok) {
+                    alert(result.message);
+                    window.location.href = result.redirect;
+                } else {
+                    throw new Error(result.error || 'Failed to submit application');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert('There was an error submitting your application. Please try again.');
+            }
+        });
+    }
+});
+        </script>
+        <script>
+            document.getElementById('guideForm').addEventListener('submit', async function(e) {
+                e.preventDefault();
+                
+                const form = e.target;
+                const formData = new FormData(form);
+                
+                try {
+                    const response = await fetch('/api/guides', {
+                        method: 'POST',
+                        body: formData
+                    });
+                    
+                    const result = await response.json();
+                    
+                    if (response.ok) {
+                        alert('Votre candidature a été soumise avec succès!');
+                        window.location.href = result.redirect;
+                    } else {
+                        throw new Error(result.error || 'Échec de la soumission');
+                    }
+                } catch (error) {
+                    console.error('Error:', error);
+                    alert('Erreur: ' + error.message);
+                }
+            });
+            </script>
+</body>
+</html>
